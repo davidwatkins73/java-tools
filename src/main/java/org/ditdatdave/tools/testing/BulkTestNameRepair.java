@@ -19,7 +19,7 @@ import java.util.Objects;
  */
 public class BulkTestNameRepair {
 
-    static class Pair {
+    private static class Pair {
 
         private Path path;
         private String content;
@@ -38,7 +38,7 @@ public class BulkTestNameRepair {
 
 
     public static void main(String[] args) throws IOException {
-        Path root = Paths.get("../waltz-dev/waltz-common/src/test/java/foo");
+        Path root = Paths.get("../waltz-dev/waltz-common/src/test/java");
         Files.walk(root)
                 .filter(Files::isRegularFile)
                 .map(Pair::mkPair)
