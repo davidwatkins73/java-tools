@@ -12,7 +12,7 @@ import java.util.Objects;
  *
  * <br>
  *
- * This solves a (self inflicted) problem where tests have been created without following the class file naming
+ * This solves a (self-inflicted) problem where tests have been created without following the class file naming
  * convention.  These tests may be executable in an IDE (which is looking for the @Test annotation) but
  * fail to run using the Maven surefire plugin or similar.  Renaming a few by hand is trivial, but when there are
  * potentially hundreds it is time-consuming.
@@ -42,7 +42,7 @@ public class BulkTestNameRepair {
         Files.walk(root)
                 .filter(Files::isRegularFile)
                 .map(Pair::mkPair)
-                .filter(p -> Objects.nonNull(p.path))
+                .filter(Objects::nonNull)
                 .filter(p -> p.content.contains("@Test"))
                 .filter(p -> ! p.path.toString().toLowerCase().endsWith("test.java"))
                 .forEach(p -> {

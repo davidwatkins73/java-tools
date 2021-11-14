@@ -1,2 +1,7 @@
 # Project exclude paths
 /target/
+/.idea/.gitignore
+/.idea/compiler.xml
+/.idea/jarRepositories.xml
+/.idea/misc.xml
+/.idea/vcs.xml
