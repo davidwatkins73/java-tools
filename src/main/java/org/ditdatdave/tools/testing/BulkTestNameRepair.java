@@ -24,7 +24,7 @@ public class BulkTestNameRepair {
         private Path path;
         private String content;
 
-        public static Pair mkPair(Path path) {
+        private static Pair mkPair(Path path) {
             try {
                 Pair pair = new Pair();
                 pair.path = path;
